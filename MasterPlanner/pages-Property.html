@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -29,8 +28,21 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+      .custom-table {
+      width: 100%; /* Ensure the table takes the full width of its container */
+    }
 
+    .custom-table td, .custom-table th {
+      padding: 0.25rem; /* Adjust cell padding to control row height */
+    }
 
+    .custom-button {
+      padding: 0.5rem 1rem; /* Adjust button size */
+      font-size: 1.25rem; /* Increase button font size */
+    }
+  </style>
 </head>
 
 <body>
@@ -466,19 +478,17 @@
 
 <!-- ===========================Property====================================================== -->
        
-
-<!-- ===========================Projectylanning====================================================== -->
 <li class="nav-heading">MasterPlanner</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-Property.html"
+        <a class="nav-link collapsed" href="users-sitedata.html">
           <i class="ri-compass-3-fill"></i>
           <span>Property Data</span>
         </a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-Acquisition.html">
+        <a class="nav-link collapsed" href="users-acqusition.html">
           <i class="ri-money-dollar-box-line"></i>
           <span>Acqusition</span>
         </a>
@@ -509,54 +519,83 @@
         </a>
        </li>
       <li>  
-
-
   </aside><!-- End Sidebar-->
-                                <!--Top of Dashboard -->
+
+<!-- ==================================================================================================== -->
+<!-- ===========================Main Window Header====================================================== -->
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Property Data</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item"><a href="index.html">> Dashboard</a></li>
         </ol>
       </nav>
-
-      
     </div><!-- End Page Title -->
 
-    <section class="section">
+<!-- ===========Upper Left Card - Property Data====================================================== -->
+<!-- ===========================Parcel Table-->
+<div class="col-lg-12">
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Parcel Table</h5>
+      <p>Enter all relevant data into the parcel table below.</p>
+  </div>
+ 
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-
+        <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
+              <div class="row">
+                <div class="col-lg-8">
+                  <table class="table table-bordered custom-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Area</th>
+                        <th scope="col">Phase</th>
+                        <th scope="col">Parcel ID</th>
+                        <th scope="col">Acres</th>
+                        <th scope="col">Land Use</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td contenteditable="true">1</td> <!-- Area column (editable) -->
+                        <td contenteditable="true">Phase Data</td> <!-- Editable data -->
+                        <td contenteditable="true">Parcel ID Data</td> <!-- Editable data -->
+                        <td contenteditable="true"></td> <!-- Editable cell -->
+                        <td contenteditable="true">Land Use Data</td> <!-- Editable data -->
+                        <td contenteditable="true">Product Data</td> <!-- Editable data -->
+                        <td>
+                          <button type="button" class="btn btn-primary custom-button"><i class="far fa-eye"></i></button>
+                          <button type="button" class="btn btn-success custom-button"><i class="fas fa-edit"></i></button>
+                          <button type="button" class="btn btn-danger custom-button"><i class="far fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
+    </div>
+    
+</body>
+    
+<!-- ===========================Parcel Table-->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+<footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
     </div>
@@ -567,11 +606,11 @@
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-  </footer><!-- End Footer -->
+</footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
+<!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/chart.js/chart.umd.js"></script>
@@ -581,7 +620,7 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+<!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>

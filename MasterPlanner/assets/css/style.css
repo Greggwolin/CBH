@@ -103,6 +103,8 @@ h6 {
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
+
+
 /* Dropdown menus */
 .dropdown-menu {
   border-radius: 4px;
@@ -233,7 +235,8 @@ h6 {
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
+  margin-bottom: 0px;
+  padding: 20px 0 0px 0;
   font-size: 18px;
   font-weight: 500;
   color: #012970;
@@ -246,8 +249,9 @@ h6 {
   font-weight: 400;
 }
 
-.card-body {
-  padding: 0 20px 20px 20px;
+.card-body p {
+  margin-top: 0px;
+  padding: 0 px 10px 0px;
 }
 
 .card-img-overlay {
@@ -1981,7 +1985,7 @@ h6 {
 .map-container iframe{
   left:0;
   top:0;
-  height:600px%;
+  height:600px;
   width:100%;
   position:absolute;
 }
